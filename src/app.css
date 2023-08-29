@@ -1,10 +1,10 @@
-.wrapper {
+/* .wrapper {
     display: grid;
     grid-template-columns: 100px 10px 100px 10x 100x;
     grid-template-rows: auto 10px auto;
-}
+} */
 
-.a{
+/* .a{
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -16,7 +16,7 @@
     grid-column-end: 4;
     grid-row-start: 3;
     grid-row-end: 4;
-} 
+}  */
 
 /* .b{
     grid-column-start: 3;
@@ -42,3 +42,73 @@
 .b{
     grid-area: 3/3/4/6;
 } */
+/* grid line is the line that divide the structure horizontal and vertical */
+/* vertical is a colum horizontal is a row */
+/* grid track is the space between two grid lines */
+/* grid cell is the space between {the table cell} 4 grid line */
+/* grid area is any area bound by 4 grid line */
+
+
+
+/* .wrapper{
+    display: grid;
+    grid-template-rows: 10px[row-header-start] auto ;
+} */
+
+.wrapper{
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 30% 5% 65%;
+    grid-template-rows: 40px auto 20px auto;
+
+}
+
+.mainheader{
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+}
+
+.panel{
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+}
+
+.content{
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+}
+
+.mainfooter{
+    grid-column: 1 / 4;
+    grid-row: 5 / 6;
+}
+
+@media(min-width){
+    .wrapper{
+        grid-template-columns: 30% 5% 65%;
+        grid-template-rows: 40px auto 20px auto 20px auto;
+    }
+
+.mainheader{
+    grid-column: 1/4;
+    grid-row: 2/3;
+}
+
+.panel{
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+.content{
+    grid-column: 3/4;
+    grid-row: 4/5;
+}
+
+.mainfooter{
+    grid-column: 1/4;
+    grid-row: 6/7;
+}
+
+}
